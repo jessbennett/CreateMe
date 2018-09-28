@@ -1,6 +1,6 @@
-# React/Redux Express Starter Pack
+# React Project used for Marketing
 
-> Create full stack apps with React/Redux and Express
+> Create full stack apps with React and Express
 ## Quick Start
 
 ``` bash

@@ -1,7 +1,7 @@
 {
   "name": "reactexpress",
   "version": "1.0.0",
-  "description": "Starter kit for creating React/Redux and Express apps",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "client-install": "cd client && npm install",
@@ -19,7 +19,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "buttons": "^0.1.2",
-    "concurrently": "^3.5.1",
+    "concurrently": "^3.6.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
