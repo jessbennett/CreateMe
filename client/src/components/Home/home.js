@@ -22,36 +22,73 @@ class Home extends Component {
         All for a reasonable price. Sign up today, and experience the benefits of creativity and style!</p>
         </section>
         <br/> 
-        <div>  
-        <section class = "itemsForHomePage">
-          <h1 data-aos="fade-up">E-Commerance</h1>
-        </section>
-        <section class = "itemsForHomePage">
-          <h1>Mobile Apps</h1>
-        </section>
-        <section class = "itemsForHomePage">
-          <h1>Digital Marketing</h1>
-        </section>
-        <section class = "itemsForHomePage">
-          <h1>Brand and Logo Design</h1>
-        </section>
-        <section class = "itemsForHomePage">
-          <h1>Web Design</h1>
-        </section>
-        <section class = "itemsForHomePage">
-          <h1>Support & Hosting</h1>
-        </section>
+        
+
+{/* fix CSS for Nav Bar,there may be conflicting CSS */}
+
+        <div class ="st-container">  
+        
+        <input type="radio" name="radio-set" checked="checked" id="st-control-1"/>
+	<a href="#st-panel-1">E-Commerance</a>
+        
+        <input type="radio" name="radio-set" id="st-control-2"/>
+	<a href="#st-panel-2">Mobile Apps</a>
+        
+        <input type="radio" name="radio-set" id="st-control-3"/>
+	<a href="#st-panel-3">Digital Marketing</a>
+
+        <input type="radio" name="radio-set" id="st-control-4"/>
+	<a href="#st-panel-4">Brand and Logo Design</a>
+        
+        <input type="radio" name="radio-set" id="st-control-5"/>
+	<a href="#st-panel-5">Web Design</a>
+
+       <input type="radio" name="radio-set" id="st-control-5"/>
+	<a href="#st-panel-5">Support & Hosting</a>
+       
+  <div class="st-scroll">
+  
+  <section class="st-panel" id="st-panel-1">
+			<div class="st-deco" data-icon="H"></div>
+			<h2>E-Commerance</h2>
+			<p>Banksy adipisicing eiusmod banh mi sed...</p>
+		</section>
+
+  <section class="st-panel" id="st-panel-2">
+			<div class="st-deco" data-icon="H"></div>
+			<h2>Mobile Apps</h2>
+			<p>Banksy adipisicing eiusmod banh mi sed...</p>
+		</section>
+
+  <section class="st-panel" id="st-panel-3">
+			<div class="st-deco" data-icon="H"></div>
+			<h2>Digital Marketing</h2>
+			<p>Banksy adipisicing eiusmod banh mi sed...</p>
+		</section>
+
+ <section class="st-panel" id="st-panel-4">
+			<div class="st-deco" data-icon="H"></div>
+			<h2>Brand and Logo Design</h2>
+			<p>Banksy adipisicing eiusmod banh mi sed...</p>
+		</section>
+
+  <section class="st-panel" id="st-panel-5">
+			<div class="st-deco" data-icon="H"></div>
+			<h2>Web Design</h2>
+			<p>Banksy adipisicing eiusmod banh mi sed...</p>
+		</section>   
+
+  <section class="st-panel" id="st-panel-6">
+			<div class="st-deco" data-icon="H"></div>
+			<h2>Support & Hostin</h2>
+			<p>Banksy adipisicing eiusmod banh mi sed...</p>
+		</section> 
+
+</div>
+        
         </div>
-      </div>
-    
-/* <script src="https://code.jquery.com/jquery-3.3.1.js"></script>    
-<script src="aos.js"></script>
-<script type="text/javascript">
-  AOS.init({
-    offset: 200,
-    duration: 1000,
-  });
-</script> */
+        </div>
+
     
     );
   }
