@@ -74,7 +74,7 @@ setServicesPage() {
           {this.state.mainContent}
           <br/>
           <br/>
-        <Footer/>
+        {/* <Footer/> */}
         </div>
     )
   }

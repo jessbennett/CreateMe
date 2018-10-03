@@ -1,12 +1,35 @@
 
-.content{display:table; margin-bottom:60px; width:900px;}
-.content h2{font-size:18px; font-weight:500; color:#002e5b; border-bottom:1px solid #fde428; display:table; padding-bottom:10px; margin-bottom:10px;}
-.content p{font-size:14px; line-height:22px; color:#7c7c7c; text-align:justify;}
+/* What we do text */
+.content{
+	display:table; 
+	margin-bottom:60px; 
+	width:900px;
+}
+.content h2{
+	font-size:18px; 
+	font-weight:500; 
+	color:#002e5b; 
+	border-bottom:1px solid 
+	#fde428; 
+	display:table; 
+	padding-bottom:10px; 
+	margin-bottom:10px;
+}
+.content p{
+	font-size:14px; 
+	line-height:22px; 
+	color:#7c7c7c; 
+	text-align:justify;
+}
 
-.social{margin:0px auto; display:table; display:table;}
+
+/* Social media buttons */
+/* .social{margin:0px auto; display:table; display:table;}
 .social li{float:left; padding:0px 10px;}
 .social li a{color:#002e5b; transition: all 0.5s ease 0s;}
-.social li a:hover{color:#fde428; transition: all 0.5s ease 0s;}
+.social li a:hover{color:#fde428; transition: all 0.5s ease 0s;} */
+
+
 .toggle-menu{
     display: none;
 }
@@ -54,13 +77,10 @@ h1 {padding: 20px 0px;}
 }
 
 
- /* Home page body for CSS */
+ 
+/* Home page body for CSS */
 
- body {
-	overflow: hidden;
-}
-
-.st-container {
+ .st-container {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -94,6 +114,7 @@ h1 {padding: 20px 0px;}
 	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
 }
 
+/* "Fix" for percentage rounding: add a background bar pseudo element with the same color like the labels */
 .st-container:before {
 	content: '';
 	position: fixed;
@@ -122,10 +143,6 @@ h1 {padding: 20px 0px;}
 
 #st-control-5, #st-control-5 + a {
 	left: 80%;
-}
-
-#st-control-5, #st-control-6 + a {
-	left: 100%;
 }
 
 .st-container > input:checked + a,
@@ -166,6 +183,10 @@ h1 {padding: 20px 0px;}
 .st-scroll {
 	top: 0;
 	left: 0;
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
 	transition: all 0.6s ease-in-out;
 	
 	/* Let's enforce some hardware acceleration */
@@ -174,30 +195,50 @@ h1 {padding: 20px 0px;}
 }
 
 .st-panel{
-	background: #fff;
-	overflow: hidden;
-}
+	/* background: #fff;
+	overflow: hidden; */
+} 
 
 #st-control-1:checked ~ .st-scroll {
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	-ms-transform: translateY(0%);
 	transform: translateY(0%);
 }
 #st-control-2:checked ~ .st-scroll {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
 	transform: translateY(-100%);
 }
 #st-control-3:checked ~ .st-scroll {
+	-webkit-transform: translateY(-200%);
+	-moz-transform: translateY(-200%);
+	-o-transform: translateY(-200%);
+	-ms-transform: translateY(-200%);
 	transform: translateY(-200%);
 }
 #st-control-4:checked ~ .st-scroll {
+	-webkit-transform: translateY(-300%);
+	-moz-transform: translateY(-300%);
+	-o-transform: translateY(-300%);
+	-ms-transform: translateY(-300%);
 	transform: translateY(-300%);
 }
 #st-control-5:checked ~ .st-scroll {
+	-webkit-transform: translateY(-400%);
+	-moz-transform: translateY(-400%);
+	-o-transform: translateY(-400%);
+	-ms-transform: translateY(-400%);
 	transform: translateY(-400%);
 }
-#st-control-6:checked ~ .st-scroll {
-	transform: translateY(-500%);
-}
 
-.st-deco{
+
+/* Content elements */
+
+/* .st-deco{
 	width: 200px;
 	height: 200px;
 	position: absolute;
@@ -205,8 +246,12 @@ h1 {padding: 20px 0px;}
 	left: 50%;
 	margin-left: -100px;
 	background: #fa96b5;
+	-webkit-transform: translateY(-50%) rotate(45deg);
+	-moz-transform: translateY(-50%) rotate(45deg);
+	-o-transform: translateY(-50%) rotate(45deg);
+	-ms-transform: translateY(-50%) rotate(45deg);
 	transform: translateY(-50%) rotate(45deg);
-}
+} */
 
 [data-icon]:after {
     content: attr(data-icon);
@@ -222,6 +267,10 @@ h1 {padding: 20px 0px;}
 	top: 50%;
 	left: 50%;
 	margin: -100px 0 0 -100px;
+	-webkit-transform: rotate(-45deg) translateY(25%);
+	-moz-transform: rotate(-45deg) translateY(25%);
+	-o-transform: rotate(-45deg) translateY(25%);
+	-ms-transform: rotate(-45deg) translateY(25%);
 	transform: rotate(-45deg) translateY(25%);
 }
 
@@ -245,9 +294,55 @@ h1 {padding: 20px 0px;}
 #st-control-2:checked ~ .st-scroll #st-panel-2 h2,
 #st-control-3:checked ~ .st-scroll #st-panel-3 h2,
 #st-control-4:checked ~ .st-scroll #st-panel-4 h2,
-#st-control-5:checked ~ .st-scroll #st-panel-5 h2,
-#st-control-6:checked ~ .st-scroll #st-panel-6 h2{
+#st-control-5:checked ~ .st-scroll #st-panel-5 h2{
+	-webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+	-moz-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+	-o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+	-ms-animation: moveDown 0.6s ease-in-out 0.2s backwards;
 	animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+@-webkit-keyframes moveDown{
+	0% { 
+		-webkit-transform: translateY(-40px); 
+		opacity: 0;
+	}
+	100% { 
+		-webkit-transform: translateY(0px);  
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes moveDown{
+	0% { 
+		-moz-transform: translateY(-40px); 
+		opacity: 0;
+	}
+	100% { 
+		-moz-transform: translateY(0px);  
+		opacity: 1;
+	}
+}
+
+@-o-keyframes moveDown{
+	0% { 
+		-o-transform: translateY(-40px); 
+		opacity: 0;
+	}
+	100% { 
+		-o-transform: translateY(0px);  
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes moveDown{
+	0% { 
+		-ms-transform: translateY(-40px); 
+		opacity: 0;
+	}
+	100% { 
+		-ms-transform: translateY(0px);  
+		opacity: 1;
+	}
 }
 
 @keyframes moveDown{
@@ -275,14 +370,60 @@ h1 {padding: 20px 0px;}
 	margin: 10px 0 0 0;
 	-webkit-backface-visibility: hidden;
 }
-
 #st-control-1:checked ~ .st-scroll #st-panel-1 p,
 #st-control-2:checked ~ .st-scroll #st-panel-2 p,
 #st-control-3:checked ~ .st-scroll #st-panel-3 p,
 #st-control-4:checked ~ .st-scroll #st-panel-4 p,
-#st-control-5:checked ~ .st-scroll #st-panel-5 p,
-#st-control-6:checked ~ .st-scroll #st-panel-6 p{
+#st-control-5:checked ~ .st-scroll #st-panel-5 p{
+	-webkit-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+	-moz-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+	-o-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+	-ms-animation: moveUp 0.6s ease-in-out 0.2s backwards;
 	animation: moveUp 0.6s ease-in-out 0.2s backwards;
+}
+
+@-webkit-keyframes moveUp{
+	0% { 
+		-webkit-transform: translateY(40px); 
+		opacity: 0;
+	}
+	100% { 
+		-webkit-transform: translateY(0px);  
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes moveUp{
+	0% { 
+		-moz-transform: translateY(40px); 
+		opacity: 0;
+	}
+	100% { 
+		-moz-transform: translateY(0px);  
+		opacity: 1;
+	}
+}
+
+@-o-keyframes moveUp{
+	0% { 
+		-o-transform: translateY(40px); 
+		opacity: 0;
+	}
+	100% { 
+		-o-transform: translateY(0px);  
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes moveUp{
+	0% { 
+		-ms-transform: translateY(40px); 
+		opacity: 0;
+	}
+	100% { 
+		-ms-transform: translateY(0px);  
+		opacity: 1;
+	}
 }
 
 @keyframes moveUp{
@@ -299,13 +440,15 @@ h1 {padding: 20px 0px;}
 /* Colored sections */
 
 .st-color,
-.st-deco{
+/* .st-deco{
 	background: #fa96b5;
-}
+} */
 .st-color [data-icon]:after {
 	color: #fa96b5;
 }
-.st-color .st-deco {
+.st-color 
+/* .st-deco  */
+{
 	background: #fff;
 }
 .st-color h2 {
@@ -313,6 +456,7 @@ h1 {padding: 20px 0px;}
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 } 
 .st-color p {
+	color: #fff;
 	color: rgba(255,255,255,0.8);
 }
 
@@ -331,30 +475,23 @@ h1 {padding: 20px 0px;}
 		font-size: 13px;
 	}
 }
-
 @media screen and (max-width: 360px) {
 	.st-container > a {
 		font-size: 10px;
 	}
 	
-	.st-deco{
+	/* .st-deco{
 		width: 120px;
 		height: 120px;
 		margin-left: -60px;
-	}
+	} */
 	
 	[data-icon]:after {
 		font-size: 60px;
+		-webkit-transform: rotate(-45deg) translateY(15%);
+		-moz-transform: rotate(-45deg) translateY(15%);
+		-o-transform: rotate(-45deg) translateY(15%);
+		-ms-transform: rotate(-45deg) translateY(15%);
 		transform: rotate(-45deg) translateY(15%);
 	}
 }
-
-/* Support for older browsers */
-body {
-	overflow: auto;
-}
-.st-container > input{
-	display: none;
-}
-
-

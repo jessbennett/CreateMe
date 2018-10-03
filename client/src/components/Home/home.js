@@ -43,8 +43,8 @@ class Home extends Component {
         <input type="radio" name="radio-set" id="st-control-5"/>
 	<a href="#st-panel-5">Web Design</a>
 
-       <input type="radio" name="radio-set" id="st-control-5"/>
-	<a href="#st-panel-5">Support & Hosting</a>
+       {/* <input type="radio" name="radio-set" id="st-control-5"/>
+	<a href="#st-panel-5">Support & Hosting</a> */}
        
   <div class="st-scroll">
   
@@ -78,11 +78,11 @@ class Home extends Component {
 			<p>Banksy adipisicing eiusmod banh mi sed...</p>
 		</section>   
 
-  <section class="st-panel" id="st-panel-6">
+  {/* <section class="st-panel" id="st-panel-6">
 			<div class="st-deco" data-icon="H"></div>
 			<h2>Support & Hostin</h2>
 			<p>Banksy adipisicing eiusmod banh mi sed...</p>
-		</section> 
+		</section>  */}
 
 </div>
         
