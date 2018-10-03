@@ -132,6 +132,10 @@ class contactForm extends Component {
     const url = '/api/uploadContactForm';
     alert(JSON.stringify(this.state))
     const requestObject = {
+      method: "POST", 
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
       headers: {
         'content-type': 'application/json; charset=UTF-8'
       },
@@ -143,7 +147,6 @@ class contactForm extends Component {
         textarea: this.state.textarea,
         description: this.state.description
       },
-      method: 'POST'
     }
     const responseFromServer = await fetch(url, requestObject);
     console.log(responseFromServer)
