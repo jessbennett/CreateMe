@@ -40,9 +40,8 @@ textarea {
   width: 100%;
   border-top: 0;
   border-right: 0;
-  border-bottom: 1px solid #bdc3c7;
   border-left: 0;
-  transition: border-bottom-color .15s ease-in;
+
 }
 
 input[type=checkbox],
@@ -54,7 +53,7 @@ textarea {
   resize: vertical;
 }
 
-.button, .getCoupon, .declineCoupon, .submitButton {
+.button, .submitButton {
   margin-top: 5px;
   margin-right: auto;
   margin-left: auto;
@@ -80,20 +79,15 @@ textarea {
 }
 
 .description {
-  margin-left: 2%;
+  /* margin-left: 2%; */
   margin-right: 2%;
-  font-style: oblique;
-  white-space: pre-wrap;      /* CSS3 */   
-  white-space: -moz-pre-wrap; /* Firefox */    
-  white-space: -pre-wrap;     /* Opera <7 */   
-  white-space: -o-pre-wrap;   /* Opera 7 */    
-  word-wrap: break-word;      /* IE */
-}
-
-.coupon {
-  background-color: ghostwhite;
-  border-radius: 5px;
-  border-width: .5px;
+  height: 100px;
+  white-space: pre-wrap;      
+  white-space: -moz-pre-wrap; 
+  white-space: -pre-wrap;     
+  white-space: -o-pre-wrap;     
+  word-wrap: break-word;      
+  
 }
 
 .flexseal{
@@ -228,10 +222,10 @@ input[type="file"] {
   text-align: left;
 }
 
-.coupon, .couponHeader, .formHeader, .uploadContactForm, .formHeaderMobile{
+.formHeader, .uploadContactForm, .formHeaderMobile{
   width:35%;
   margin-bottom:auto;
-  background-color:ghostwhite;
+ /* Remove */
   margin-top:30px;
   align-items: center;
   justify-content: center;
@@ -241,13 +235,13 @@ input[type="file"] {
 }
 
 @media only screen and (max-width: 1000px) {
-  .uploadContactForm, .formHeader, .coupon, .couponHeader{
+  .uploadContactForm, .formHeader{
     width:45%;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .uploadContactForm, .formHeader, .coupon, .couponHeader{
+  .uploadContactForm, .formHeader{
     width:90%;
   }
   .formHeader{
@@ -259,7 +253,7 @@ input[type="file"] {
 }
 
 @media only screen and (max-width: 800px) {
-  .uploadContactForm, .formHeader, .coupon, .couponHeader, .formHeaderMobile{
+  .uploadContactForm, .formHeader,.formHeaderMobile{
     width:90%;
   }
   .formHeaderMobile {
@@ -267,7 +261,7 @@ input[type="file"] {
   }
 }
 
-.formHeader, .couponHeader, .formHeaderMobile {
+.formHeader, .formHeaderMobile {
   text-align:center;
   background-color:#ff99cc;
   font-size:14px;
@@ -275,3 +269,5 @@ input[type="file"] {
   color:#002e5b;
   border-radius:5px;
 }
+
+

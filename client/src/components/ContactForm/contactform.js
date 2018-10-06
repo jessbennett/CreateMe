@@ -12,29 +12,6 @@ class Label extends Component {
 }
 
 
-// Create component for textarea
-class Textarea extends Component {
-  render() {
-    return (
-      <fieldset>
-
-        <textarea
-          cols={this.props.cols || ' '}
-          id={this.props.htmlFor}
-          name={this.props.name || ' '}
-          required={this.props.required || ' '}
-          rows={this.props.rows || ' '}
-          value = {this.props.textarea || ' '}
-          onChange={this.props.onChange || ' '}
-          className={this.props.className}
-        >
-        </textarea>
-      </fieldset>
-    );
-  }
-};
-
-
 // Create component for select input
 class Select extends Component {
   render() {
@@ -137,6 +114,7 @@ class contactForm extends Component {
       cache: "no-cache",
       credentials: "same-origin",
       headers: {
+
         'content-type': 'application/json; charset=UTF-8'
       },
       body: {
@@ -211,15 +189,18 @@ class contactForm extends Component {
           type='text'
           onChange={(e)=>this.handleTextChange(e)} />
         <br/>
-        
-        <Input
+       
+        <div class="description">
+        <Input 
           hasLabel='true'
           htmlFor='textInput'
-          label=' Breif description of what you want'
+          label='Breif description of what you want'
           required='true'
           type='text'
           onChange={(e)=>this.handleDescriptionChange(e)}/>
          <br/>
+         </div>
+          
           <div className='box'>
               <a className="icon-button" href="#popup1">
                 <i 
@@ -228,7 +209,7 @@ class contactForm extends Component {
                 </a>
 <div id="popup1" className="overlay">
 	<div className="popup">
-		<h2>How much does this cost?</h2>
+		{/* <h2>How much does this cost?</h2> */}
 		<a className="close" href=" ">&times;</a>
 		<div className="popupcontent">
 			There is no way to generate a price before contating the owner first. During a brief consultaion, the owner will discuss prices and services with the client. Qoutes are only an estimate and are subject to change. 
@@ -242,7 +223,7 @@ class contactForm extends Component {
             label='Business or Personal'
             options="Business, Personal"
             required='true'
-            value={this.state.superCoupon}
+            value={this.state.handleSelectionChange}
             onChange={(e)=>this.handleSelectionChange(e)} />
           </div>
           <br/>
