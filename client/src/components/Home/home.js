@@ -23,11 +23,42 @@ class Home extends Component {
         <br/> 
         
        
-<div class="servicesWithImages">
+        <div class="sp-container">
+	
+        <div class="sp-content">
+		<div class="sp-globe"></div>
+		<h2 class="frame-1">E-commerance</h2>
+		<h2 class="frame-2">Mobile Apps</h2>
+		<h2 class="frame-3">Web Design</h2>
+		<h2 class="frame-4">Support & Hosting</h2>
+		<h2 class="frame-5">
+			<span>CreateMe</span>
+		</h2>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <div class="servicesWithImages">
         <div class="e-commerance">
-	<h1>E-Commerance</h1>
-        <img src='../../Images/ecommerce-pic22.png' /> 
-        
+	<h1>E-Commerance</h1> 
         </div>
 
 <div class="mobileApps">
@@ -50,7 +81,9 @@ class Home extends Component {
 	<h1>Support & Hosting</h1>
         </div>  
 
-</div>
+</div> */}
+
+
         </div>
 
     

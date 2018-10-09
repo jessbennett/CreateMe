@@ -12,7 +12,7 @@ class About extends Component {
     render() {
         return (
             <div class="row">
-            <div class="containers col-lg-6 col-md-6">
+            {/* <div class="containers col-lg-6 col-md-6">
               
               <div class="pic"></div>
               
@@ -28,7 +28,7 @@ class About extends Component {
               <div class="social3">
                 <i class="fa fa-codepen" aria-hidden="true"></i>
               </div>
-            </div>
+            </div> */}
             
             <div class="aboutUs">
               
