@@ -4,12 +4,13 @@ body
   background:url('https://s-media-cache-ak0.pinimg.com/736x/f4/ac/6a/f4ac6aac3afb587f6cae04155656fca3.jpg');
 }
 
-/* .containers
+.containers
 {
-  width:550px;
-  height:100%;
-  margin-left:10px;
-} */
+  position: absolute; /* or absolute */
+  top: 50%;
+  left: 50%;
+  
+}
 
 .pic
 {
@@ -24,15 +25,16 @@ body
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.pic:before
-{
+.pic:before {
   content: '';
   margin-top:-63px;
   margin-left:-80px;
   position: absolute;
   width: 450px;
   height: 450px;
-  /* background: url('CreateMeLogo') center center; */
+  background: url('http://i67.tinypic.com/io3vci.png') center center;
+  background-repeat: no-repeat;
+  background-size: 300px 100px;
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -65,7 +67,9 @@ body
   position: absolute;
   width: 200px;
   height: 200px;
-  background: url('http://creek.themebucket.net/wp-content/uploads/2015/09/8.jpg') center center;
+  background: url('http://i64.tinypic.com/2cfutxg.png') center center;
+  background-repeat: no-repeat;
+  background-size: 150px 170px;
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -114,10 +118,11 @@ p
 
 .newCustomer
 {
-  font-family: 'Dancing Script';
+  font-family: 'Tahoma, Geneva, sans-serif';
   width: 100%; 
-  margin-right: 10px;
-  margin-left: 10px;
+  /* margin-right: 10px;
+  margin-left: 10px; */
+  overflow: hidden;
   
 }
 

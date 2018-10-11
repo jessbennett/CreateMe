@@ -83,7 +83,7 @@ class contactForm extends Component {
       firstName: '',
       lastName: '',
       email: '',
-      selection: 'choose business or personal',
+      // selection: 'choose business or personal',
       textarea: '',
       description:''
     };
@@ -121,7 +121,7 @@ class contactForm extends Component {
         firstname: this.state.firstName,
         lastName: this.state.lastName,
         email: this.state.email,
-        selection: this.state.selection,
+        // selection: this.state.selection,
         textarea: this.state.textarea,
         description: this.state.description
       },
@@ -129,13 +129,13 @@ class contactForm extends Component {
     const responseFromServer = await fetch(url, requestObject);
     console.log(responseFromServer)
   }
-  handleSelectionChange(e){
-    const superChoices = [
-      "Business",
-      'Personal',
-    ]
-    this.setState({selectionChoice: superChoices[e.target.value]})
-  }
+  // handleSelectionChange(e){
+  //   const superChoices = [
+  //     "Business",
+  //     'Personal',
+  //   ]
+  //   this.setState({selectionChoice: superChoices[e.target.value]})
+  // }
 
   render() {
     return (
@@ -201,7 +201,7 @@ class contactForm extends Component {
          <br/>
          </div>
           
-          <div className='box'>
+          {/* <div className='box'>
               <a className="icon-button" href="#popup1">
                 <i 
                 className="icon-question">
@@ -209,7 +209,6 @@ class contactForm extends Component {
                 </a>
 <div id="popup1" className="overlay">
 	<div className="popup">
-		{/* <h2>How much does this cost?</h2> */}
 		<a className="close" href=" ">&times;</a>
 		<div className="popupcontent">
 			There is no way to generate a price before contating the owner first. During a brief consultaion, the owner will discuss prices and services with the client. Qoutes are only an estimate and are subject to change. 
@@ -227,7 +226,8 @@ class contactForm extends Component {
             onChange={(e)=>this.handleSelectionChange(e)} />
           </div>
           <br/>
-          <br/>
+          <br/> */}
+  
   
           <button className="submitButton" 
             type="submit" 

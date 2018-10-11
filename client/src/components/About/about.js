@@ -12,7 +12,7 @@ class About extends Component {
     render() {
         return (
             <div class="row">
-            {/* <div class="containers col-lg-6 col-md-6">
+            <div class="containers col-lg-6 col-md-6">
               
               <div class="pic"></div>
               
@@ -28,22 +28,26 @@ class About extends Component {
               <div class="social3">
                 <i class="fa fa-codepen" aria-hidden="true"></i>
               </div>
-            </div> */}
+            </div>
             
             <div class="aboutUs">
               
               <h1 class="contentHead">ABOUT US</h1>
               
-              <h2 class="newCustomer">Hello New Customer, <br/><br/>
-                CreateMe was hard coded and designed by experienced software engineers that saw a lack of creativity with small business websites. Simply because small bussinesses are usually on a tight budget. At CreateMe, we believe that ALL business types should have the oppurtunity to experience quality websites or mobile apps at a low cost. The developers on our team have over 5 years experience in software development and customer service, so you know you won't recieve anything less than the best.
-            
-                <br/><br/>
+              <p class="newCustomer">Hello New Customer, <br/><br/>
+                CreateMe was hard coded and designed by experienced software engineers that saw a lack of creativity with small business websites. 
+                Simply because small bussinesses are usually on a tight budget. At CreateMe, we believe that 
+                ALL business types should have the oppurtunity to experience quality websites or mobile apps at a low cost. 
+                The developers on our team have over 5 years experience in software development and customer service, 
+                so you know you won't recieve anything less than the best.
+            <br/>
+                <br/>
                 So go ahead and fill out that contact form and experience true customer service <span>&hearts;</span>
                 <br/><br/>
              
-              </h2>
+              </p>
             </div>
-            // </div>   
+           </div>   
         )
     
 }

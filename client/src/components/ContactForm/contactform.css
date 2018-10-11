@@ -94,7 +94,7 @@ textarea {
   background-color: ghostwhite;
 }
 
-.icon-question {
+/* .icon-question {
   display:inline;
   float:right;
   margin-right:0%;
@@ -110,7 +110,7 @@ textarea {
   background-color:cyan;
   cursor:pointer;
   text-decoration: none;
-}
+} */
 
 body {
   font-family: Arial, sans-serif;
@@ -204,7 +204,7 @@ input[type="file"] {
     float:left;
 }
 .submitButton {
-  display: inline;;
+  display: center;
   margin-top:0px;
 }
 .submitButton:hover, .custom-file-upload:hover {
@@ -222,13 +222,18 @@ input[type="file"] {
   text-align: left;
 }
 
+#textInput {
+  width: 98%;
+}
+
+
+
+
 .formHeader, .uploadContactForm, .formHeaderMobile{
   width:35%;
   margin-bottom:auto;
- /* Remove */
+  background-color:ghostwhite; /* Remove */
   margin-top:30px;
-  align-items: center;
-  justify-content: center;
 }
 .formHeaderMobile{
   display:none;
