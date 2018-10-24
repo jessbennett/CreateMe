@@ -11,18 +11,8 @@ class Label extends Component {
   }
 }
 
-
-// Create component for select input
-class Select extends Component {
+class Textarea extends Component {
   render() {
-    // Get all options from option prop
-    const selectOptions = this.props.options.split(', ');
-
-    // Generate list of options
-    const selectOptionsList = selectOptions.map((selectOption, index) => {
-      return <option key={index} value={index}>{selectOption}</option>
-    });
-
     return (
       <fieldset>
         <Label
@@ -30,24 +20,24 @@ class Select extends Component {
           htmlFor={this.props.htmlFor}
           label={this.props.label}
           className={this.props.className}
+          icon={this.props.icon}
         />
-        
-        <select
-          defaultValue=''
-          id={this.props.htmlFor}
-          name={this.props.name || ' '}
-          required={this.props.required || ' '}
-          value = {this.props.length || ' '}
-          onChange={this.props.onChange || ' '}
-        >
-          <option value='' disabled>Make Selection</option>
 
-          {selectOptionsList}
-        </select>
+        <textarea
+          cols={this.props.cols || ''}
+          name={this.props.name || ''}
+          required={this.props.required || ''}
+          rows={this.props.rows || ''}
+          value = {this.props.textarea}
+          onChange={this.props.onChange || ''}
+          className={this.props.className}
+        >
+        </textarea>
       </fieldset>
     );
   }
 };
+
 // Create component for input
 class Input extends Component {
   render() {
@@ -83,7 +73,6 @@ class contactForm extends Component {
       firstName: '',
       lastName: '',
       email: '',
-      // selection: 'choose business or personal',
       textarea: '',
       description:''
     };
@@ -121,7 +110,6 @@ class contactForm extends Component {
         firstname: this.state.firstName,
         lastName: this.state.lastName,
         email: this.state.email,
-        // selection: this.state.selection,
         textarea: this.state.textarea,
         description: this.state.description
       },
@@ -129,13 +117,6 @@ class contactForm extends Component {
     const responseFromServer = await fetch(url, requestObject);
     console.log(responseFromServer)
   }
-  // handleSelectionChange(e){
-  //   const superChoices = [
-  //     "Business",
-  //     'Personal',
-  //   ]
-  //   this.setState({selectionChoice: superChoices[e.target.value]})
-  // }
 
   render() {
     return (
@@ -191,7 +172,7 @@ class contactForm extends Component {
         <br/>
        
         <div class="description">
-        <Input 
+        <Textarea 
           hasLabel='true'
           htmlFor='textInput'
           label='Breif description of what you want'
@@ -200,34 +181,6 @@ class contactForm extends Component {
           onChange={(e)=>this.handleDescriptionChange(e)}/>
          <br/>
          </div>
-          
-          {/* <div className='box'>
-              <a className="icon-button" href="#popup1">
-                <i 
-                className="icon-question">
-                </i>
-                </a>
-<div id="popup1" className="overlay">
-	<div className="popup">
-		<a className="close" href=" ">&times;</a>
-		<div className="popupcontent">
-			There is no way to generate a price before contating the owner first. During a brief consultaion, the owner will discuss prices and services with the client. Qoutes are only an estimate and are subject to change. 
-		</div>
-	</div>
-</div>
-            
-<Select
-            hasLabel='true'
-            htmlFor='select'
-            label='Business or Personal'
-            options="Business, Personal"
-            required='true'
-            value={this.state.handleSelectionChange}
-            onChange={(e)=>this.handleSelectionChange(e)} />
-          </div>
-          <br/>
-          <br/> */}
-  
   
           <button className="submitButton" 
             type="submit" 

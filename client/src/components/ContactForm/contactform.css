@@ -30,11 +30,9 @@ fieldset {
 label {
   margin-bottom: 8px;
   display: block;
-  color: #2b2e4a;
 }
 
 input:not([type=checkbox]):not([type=radio]),
-select,
 textarea {
   padding: 8px;
   width: 100%;
@@ -53,7 +51,7 @@ textarea {
   resize: vertical;
 }
 
-.button, .submitButton {
+.submitButton {
   margin-top: 5px;
   margin-right: auto;
   margin-left: auto;
@@ -79,7 +77,6 @@ textarea {
 }
 
 .description {
-  /* margin-left: 2%; */
   margin-right: 2%;
   height: 100px;
   white-space: pre-wrap;      
@@ -94,23 +91,6 @@ textarea {
   background-color: ghostwhite;
 }
 
-/* .icon-question {
-  display:inline;
-  float:right;
-  margin-right:0%;
-  background-color:#3fc1c9;
-  color:black;
-  padding-right:6px;
-  padding-left:6px;
-  padding-top:3px;
-  padding-bottom:3px;
-  border-radius: 80px;
-}
-.icon-question:hover {
-  background-color:cyan;
-  cursor:pointer;
-  text-decoration: none;
-} */
 
 body {
   font-family: Arial, sans-serif;
@@ -130,79 +110,6 @@ body {
   background: #06D85F;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .popupcontent {
-  max-height: 30%;
-  overflow: auto;
-}
-
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
-}
-
-.icon-question {
-  text-decoration: none;
-}
-
-input[type="file"] {
-  display:none;
-}
-.custom-file-upload {
-    background-color: #3fc1c9;
-    color:ghostwhite;
-    display: inline;
-    padding: 6px 12px;
-    cursor: pointer;
-    float:left;
-}
 .submitButton {
   display: center;
   margin-top:0px;
@@ -225,8 +132,6 @@ input[type="file"] {
 #textInput {
   width: 98%;
 }
-
-
 
 
 .formHeader, .uploadContactForm, .formHeaderMobile{
@@ -271,8 +176,6 @@ input[type="file"] {
   background-color:#ff99cc;
   font-size:14px;
   text-transform:uppercase;
-  color:#002e5b;
+  color:#fdfdfd;
   border-radius:5px;
 }
-
-

@@ -41,7 +41,7 @@ app.post('/api/uploadContactForm', (req, res) => {
 
     // setup email data with unicode symbols
     const mailOptions = {
-        from: '"CreateMe Contact Form" <createMeHR@gmail.comm>', // sender address
+        from: '"CreateMe Contact Form" <createMeHR@gmail.com>', // sender address
         to: req.body.email, // list of receivers
         subject: "Contact Request", // Subject line
         text: 'Hello world?', // plain text body
