@@ -33,12 +33,14 @@ class App extends Component {
     this.state = { 
       mainContent: <Home/>,
       showOrHideNav: 'hidden',
+      ignoreClick: true
   };
   this.setMainHome = this.setMainHome.bind(this);
   this.setMainUploadContactForm = this.setMainUploadContactForm.bind(this);
   this.setAboutPage = this.setAboutPage.bind(this);
   this.setServicesPage = this.setServicesPage.bind(this);
   this.showOrHideNav = this.showOrHideNav.bind(this);
+  this.hideNav = this.hideNav.bind(this);
 }
 componentDidMount () {
   const urlHandler = (currentURL) => {
@@ -70,9 +72,12 @@ componentDidMount () {
   }
 }
 showOrHideNav(){
-  if (this.state.showOrHideNav === "navPopup") this.setState({showOrHideNav:"hidden"})
-  else this.setState({showOrHideNav:"navPopup"})
+  if (this.state.showOrHideNav === "navPopup") this.setState({showOrHideNav:"hidden", ignoreClick: true})
+  else this.setState({showOrHideNav:"navPopup", ignoreClick: false})
 }
+  hideNav(){
+    if (this.showOrHideNav !== "hidden" && this.state.ignoreClick === false) this.setState({showOrHideNav: "hidden", ignoreClick: true})
+  }
   setAboutPage() {
     this.setState({mainContent: <About/>})
   }
@@ -92,7 +97,7 @@ showOrHideNav(){
   
   render () {
     return (
-        <div className="home">
+        <div className="home" onClick={this.hideNav}>
           <h1 className='homeMainTitle'>
             <span>
               Let Us Create Something New.

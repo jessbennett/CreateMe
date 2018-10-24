@@ -171,7 +171,7 @@ class contactForm extends Component {
           onChange={(e)=>this.handleTextChange(e)} />
         <br/>
        
-        <div class="description">
+        <div className="description">
         <Textarea 
           hasLabel='true'
           htmlFor='textInput'
