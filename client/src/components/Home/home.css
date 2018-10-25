@@ -2,14 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow');
 
 
-/* container class is not being used */
 .container {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
 }
 
-/* A class is not being used but i suggest you change it */
 a {
 	text-decoration: none;
 }
@@ -24,15 +22,15 @@ h1.main, p.demos {
 
 .sp-container {
 	position: fixed;
-	top: 193px;
+	top: 196px;
 	left: 0px;
 	width: 100%;
 	height: 100%;
 	z-index: 0;
-	background: -webkit-radial-gradient(rgba(104, 101, 101, 0.651), rgba(185, 181, 181, 0.911) 35%, rgba(236, 232, 232, 0.7));
-	background: -moz-radial-gradient(rgba(104, 101, 101, 0.651), rgba(185, 181, 181, 0.911) 35%, rgba(236, 232, 232, 0.7));
-	background: -ms-radial-gradient(rgba(104, 101, 101, 0.651), rgba(185, 181, 181, 0.911) 35%, rgba(236, 232, 232, 0.7));
-	background: radial-gradient(rgba(104, 101, 101, 0.651), rgba(185, 181, 181, 0.911) 35%, rgba(236, 232, 232, 0.7));
+	background: -webkit-radial-gradient(rgba(141, 138, 138, 0.966), rgba(185, 181, 181, 0.911) 35%, rgba(236, 232, 232, 0.7));
+	background: -moz-radial-gradient(rgba(141, 138, 138, 0.966), rgba(185, 181, 181, 0.911) 35%, rgba(236, 232, 232, 0.7));
+	background: -ms-radial-gradient(rgba(141, 138, 138, 0.966), rgba(185, 181, 181, 0.911) 35%, rgba(236, 232, 232, 0.7));
+	background: radial-gradient(rgba(141, 138, 138, 0.966), rgba(185, 181, 181, 0.911) 35%, rgba(236, 232, 232, 0.7));
 }
 .sp-content {
 	position: absolute;
@@ -93,7 +91,7 @@ h1.main, p.demos {
 	-moz-animation: blurFadeIn 1s ease-in 12s backwards;
 	-ms-animation: blurFadeIn 3s ease-in 12s backwards;
 	animation: blurFadeIn 3s ease-in 12s backwards;
-	text-shadow: #ff99cc;
+	color: #ff99cc;
 }
 .sp-container h2.frame-5 span:nth-child(2) {
 	-webkit-animation-delay: 13s;
@@ -127,7 +125,17 @@ h1.main, p.demos {
 	transform: scale(5);
 }
 
-/**/
+/* Media Queries */
+@media screen and (max-width: 700px) {
+	.sp-container {
+		height: 100%;
+		top: 165px;
+	}
+}
+
+
+
+/*Text FADE-IN*/
 
 @-webkit-keyframes blurFadeInOut {
 	0% {
@@ -187,7 +195,7 @@ h1.main, p.demos {
 		-webkit-transform: scale(1) rotate(0deg);
 	}
 }
-/**/
+/*Text FADE-IN*/
 
 @-moz-keyframes blurFadeInOut {
 	0% {
@@ -242,7 +250,7 @@ h1.main, p.demos {
 		-moz-transform: scale(1) rotate(0deg);
 	}
 }
-/**/
+/*Text BLUR OUT*/
 
 @keyframes blurFadeInOut {
 	0% {
