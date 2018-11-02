@@ -12,15 +12,17 @@ require('dotenv').load();
 
 //static folder
 app.use('/public', express.static(path.join(__dirname, 'public')));
-
+console.log(process.env.email)
+console.log(process.env.pass)
 app.post('/api/uploadContactForm', (req, res) => {
+    console.log(JSON.stringify(req.body))
     const output = `
-    <h3>Contact Details</h3>
+    <h3>Thank you for contacting us!</h3>
+    <p> We will be responding shortly to your request. Please verify the below information is correct.</p>
     <ul>
-        <li>First Name: ${req.body.firstName}</li>
+        <li>First Name: ${req.body.firstname}</li>
         <li>Last Name: ${req.body.lastName}</li>
         <li>Email: ${req.body.email}</li>
-        <li>Business or personal: ${req.body.selection}</li>
         <li>URL: ${req.body.textarea}</li>
         <li>Description: ${req.body.description}</li>
     </ul>   

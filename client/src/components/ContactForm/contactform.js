@@ -97,6 +97,13 @@ class contactForm extends Component {
   async uploadForm(e) {
     const url = '/api/uploadContactForm';
     alert(JSON.stringify(this.state))
+    const dataObj = {
+      firstname: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      textarea: this.state.textarea,
+      description: this.state.description
+    }
     const requestObject = {
       method: "POST", 
       mode: "cors",
@@ -106,13 +113,7 @@ class contactForm extends Component {
 
         'content-type': 'application/json; charset=UTF-8'
       },
-      body: {
-        firstname: this.state.firstName,
-        lastName: this.state.lastName,
-        email: this.state.email,
-        textarea: this.state.textarea,
-        description: this.state.description
-      },
+      body: JSON.stringify(dataObj),
     }
     const responseFromServer = await fetch(url, requestObject);
     console.log(responseFromServer)
