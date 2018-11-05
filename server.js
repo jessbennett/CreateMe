@@ -15,7 +15,6 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 console.log(process.env.email)
 console.log(process.env.pass)
 app.post('/api/uploadContactForm', (req, res) => {
-    console.log(JSON.stringify(req.body))
     const output = `
     <h3>Thank you for contacting us!</h3>
     <p> We will be responding shortly to your request. Please verify the below information is correct.</p>

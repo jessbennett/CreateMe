@@ -37,8 +37,9 @@ h1.main, p.demos {
 	width: 100%;
 	height: 100%;
 	left: 0px;
-	top: 0px;
+	margin-top: -80px;
 	z-index: 1000;
+	font-size: 20px;
 }
 .sp-container h2 {
 	position: absolute;
@@ -126,12 +127,12 @@ h1.main, p.demos {
 }
 
 /* Media Queries */
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
 	.sp-container {
 		height: 100%;
 		top: 165px;
 	}
-}
+} */
 
 
 
@@ -310,3 +311,16 @@ h1.main, p.demos {
 		transform: scale(1) rotate(0deg);
 	}
 }
+
+
+@media screen and (max-width: 601px) {
+  .frame-1, .frame-2, .frame-3, .frame-4, .frame-5 { 
+	font-size: 10px;
+	}
+}
+
+/* 
+.frame-1, .frame-2, .frame-3, .frame-4, .frame-5{
+	font-size: 50px !important;
+
+}  */

@@ -12,9 +12,8 @@ class Footer extends Component {
       <div>
         <footer>
             <ul className="social">
-                <li><a href="https://www.facebook.com/CreateMe.Software/" ><i className="icon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/CreateMe.Software/" ><i className="icon-youtube-play"></i></a></li>
                 <li><a href="https://www.facebook.com/CreateMe.Software/" ><i className="icon-facebook"></i></a></li>
-                <li><a href="https://www.facebook.com/CreateMe.Software/" ><i className="icon-instagram"></i></a></li>
             </ul>
         </footer>
       </div>

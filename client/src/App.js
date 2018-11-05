@@ -31,7 +31,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      mainContent: <Home/>,
+      mainContent: ' ',
       showOrHideNav: 'hidden',
       ignoreClick: true
   };
@@ -46,7 +46,7 @@ componentDidMount () {
   const urlHandler = (currentURL) => {
     switch (currentURL.toLowerCase()) {
       case '':
-          this.setState({mainContent: <Home/>})
+      this.setState({mainContent: <Home/>})
           break;
       case 'about':
           this.setState({mainContent: <About/>})
@@ -58,7 +58,8 @@ componentDidMount () {
           this.setState({mainContent: <ContactForm/>})
           break;
       default:
-          this.setState({mainContent: <Home/>})
+      this.setState({mainContent: <Home/>})
+        
     }
   }
   const url = window.location.href.substring(window.location.href.lastIndexOf('/')+1, window.location.href.length)
@@ -72,6 +73,7 @@ componentDidMount () {
   }
 }
 showOrHideNav(){
+
   if (this.state.showOrHideNav === "navPopup") this.setState({showOrHideNav:"hidden", ignoreClick: true})
   else this.setState({showOrHideNav:"navPopup", ignoreClick: false})
 }
@@ -121,17 +123,17 @@ showOrHideNav(){
           <nav className = {this.state.showOrHideNav} onClick={this.showOrHideNav}>            
           <ul>
               <Link href = '/Home'><li onClick={this.setMainHome}><div><i className="icon-home"></i>Home</div></li></Link>
-              <Link href = '/Contact'><li onClick={this.setMainUploadContactForm}><div>Contact</div></li></Link>
-              <Link href = '/About'><li onClick={this.setAboutPage}><div>About</div></li></Link>
-              <Link href = '/Services'><li onClick={this.setServicesPage}><div>Services</div></li></Link>
+              <Link href = '/Contact'><li onClick={this.setMainUploadContactForm}><div><i className="icon-phone"></i>Contact</div></li></Link>
+              <Link href = '/About'><li onClick={this.setAboutPage}><div><i className="icon-info"></i>About</div></li></Link>
+              <Link href = '/Services'><li onClick={this.setServicesPage}><div><i className="icon-desktop"></i>Services</div></li></Link>
             </ul>
           </nav>
           </section>
         </header>
-          <h1>{this.state.test}</h1>
           {this.state.mainContent}
           <br/>
           <br/>
+
         <Footer/>
         </div>
     )

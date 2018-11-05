@@ -14,13 +14,13 @@ class Home extends Component {
     return (
 <div>
  <div className="sp-container">
-  <div className="sp-content">
-	<h2 className="frame-1">E-commerance</h2>
+  {/* <div className="sp-content"> */}
+	<h2 className="frame-1">Online Stores</h2>
 	<h2 className="frame-2">Mobile Apps</h2>
 	<h2 className="frame-3">Web Design</h2>
-	<h2 className="frame-4">Support & Hosting</h2>
+	<h2 className="frame-4">Hosting</h2>
 	<h2 className="frame-5"><span>CreateMe</span></h2>
-  </div>
+  {/* </div> */}
  </div>
 </div>
 

@@ -136,7 +136,7 @@ class contactForm extends Component {
         <div className='uploadContactForm'>
         <form>
           <br/>
-  <p className="text"><strong>Complete Our Contact Form and We will respond ASAP or Call Us at (561) 856-1307 for a FREE Qoute</strong></p>
+  <p className="text"><strong>Complete Our Contact Form and We will respond ASAP or E-mail Us directly at CreateMeHR@GMAIL.COM for a FREE Qoute</strong></p>
   <br/>
   
 <Input
