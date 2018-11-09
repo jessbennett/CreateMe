@@ -21,7 +21,7 @@ section{max-width:95%}
 .notHidden{display:inline}
 header{padding:20px 0}
 #logo{padding:0}
-.toggle-menu{float:right;padding:8px 0;display:inline-block;cursor:pointer}
+.toggle-menu{float:right;padding:8px 0;display:block;cursor:pointer}
 nav{position:absolute;right:-20px;top:53px;background-color:#c0c0c0;padding:0;z-index:99}
 nav ul{width:auto}
 nav ul li{float:none;padding:0;width:100%;display:table}
