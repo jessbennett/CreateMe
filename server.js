@@ -1,4 +1,3 @@
-
 require('dotenv').config()
 const express = require('express');
 const app = express();
@@ -7,9 +6,7 @@ const bodyParser = require('body-parser');
 const nodemailer  = require('nodemailer');
 app.use(bodyParser.json({limit:'50mb'})) // handle json data
 app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-encoded data
-
 require('dotenv').load();
-
 //static folder
 app.use('/public', express.static(path.join(__dirname, 'public')));
 console.log(process.env.email)
@@ -26,7 +23,6 @@ app.post('/api/uploadContactForm', (req, res) => {
         <li>Description: ${req.body.description}</li>
     </ul>   
     `;
-
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -39,7 +35,6 @@ app.post('/api/uploadContactForm', (req, res) => {
             rejectUnauthorized:false
         }
     });
-
     // setup email data with unicode symbols
     const mailOptions = {
         from: '"CreateMe Contact Form" <createMeHR@gmail.com>', // sender address
@@ -48,7 +43,6 @@ app.post('/api/uploadContactForm', (req, res) => {
         text: 'Hello world?', // plain text body
         html: output // html body
     };
-
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
@@ -61,12 +55,7 @@ app.post('/api/uploadContactForm', (req, res) => {
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 });
-
 }); 
-
-  
 const port = 4000;
-
 app.listen(port, () => `Server running on port ${port}`)
-    
 ;
