@@ -1,24 +1,3 @@
-.servicesInfo {
-    display:table; 
-    margin-bottom:60px; 
-    max-width:1000px;
-  }
-  .servicesInfo .textHeader {
-    font-size:18px; 
-    font-weight:500; 
-    color:#002e5b; 
-    border-bottom:1px solid #fde428; 
-    display:table; 
-    padding-bottom:10px; 
-    margin-bottom:10px;
-  }
-  .servicesInfo .text {
-    font-size:16px; 
-    line-height:25px; 
-    color:#000000; 
-    text-align:justify;
-  }
-
-
-
-
+.servicesInfo{display:table;margin-bottom:60px;max-width:1000px}
+.servicesInfo .textHeader{font-size:18px;font-weight:500;color:#002e5b;border-bottom:1px solid #fde428;display:table;padding-bottom:10px;margin-bottom:10px}
+.servicesInfo .text{font-size:16px;line-height:25px;color:#000;text-align:justify}
