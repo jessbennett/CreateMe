@@ -1,0 +1,23 @@
+{
+    "name": "CreateMe",
+    "description": "Web application for business inquiries.",
+    "keywords": [
+      "Custom websites",
+      "HTML5",
+      "React.JS",
+      "Node.JS"
+    ],
+    "website": "https://Createmesoftware.com/",
+    "repository": "https://github.com/jessbennett/CreateMe.git",
+    "logo": "https://s3.us-east-2.amazonaws.com/unlimited-couponer/createMeIcon.png",
+    "success_url": "/welcome",
+    "scripts": {
+      "postdeploy": "bundle exec rake bootstrap"
+    },
+    "env": {
+      "SECRET_TOKEN": {
+        "description": "A secret key for verifying the integrity of signed cookies.",
+        "generator": "secret"
+      }
+    }
+}
