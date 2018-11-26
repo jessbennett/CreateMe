@@ -9,8 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-e
 require('dotenv').load();
 //static folder
 app.use('/public', express.static(path.join(__dirname, 'public')));
-console.log(process.env.email)
-console.log(process.env.pass)
+
 app.post('/api/uploadContactForm', (req, res) => {
     const output = `
     <h3>Thank you for contacting us!</h3>
@@ -56,6 +55,8 @@ app.post('/api/uploadContactForm', (req, res) => {
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 });
 }); 
-const port = 4000;
-app.listen(port, () => `Server running on port ${port}`)
-;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
