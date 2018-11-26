@@ -16,4 +16,4 @@ npm run server
 npm run client
 # Server runs on http://localhost:4000 and client on http://localhost:4000
 ```
-#This project is completed and is ready for deployment. If you would like to make any changes or suggestions, please feel free to shot me an email.
+#This project is completed and is ready for deployment. If you would like to make any changes or suggestions, please feel free to shoot me an email.
