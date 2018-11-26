@@ -1,3 +1,7 @@
+#node_modules
+node_modules
+
+
 #ignore secret info
 .env
 .env.example

@@ -34,6 +34,7 @@
     "path": "^0.12.7",
     "react-radio": "^2.1.2",
     "redis": "^2.8.0",
+    "uglify-js": "^3.4.9",
     "update-node": "^0.1.0",
     "xoauth2": "^1.2.0"
   }
