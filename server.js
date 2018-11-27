@@ -10,7 +10,12 @@ require('dotenv').load();
 //static folder
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.post('/api/uploadContactForm', (req, res) => {
+app.get('./client/public/index.html',function(req,res){
+    res.sendFile('index.html');
+    //It will find and locate index.html from View or Scripts
+  });
+
+  app.post('/api/uploadContactForm', (req, res) => {
     const output = `
     <h3>Thank you for contacting us!</h3>
     <p> We will be responding shortly to your request. Please verify the below information is correct.</p>
@@ -57,6 +62,6 @@ app.post('/api/uploadContactForm', (req, res) => {
 }); 
 var port = process.env.PORT;
 if (port == null || port == "") {
-  port = 5000;
+  port = 8000;
 }
 app.listen(port);

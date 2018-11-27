@@ -36,5 +36,8 @@
     "redis": "^2.8.0",
     "update-node": "^0.1.0",
     "xoauth2": "^1.2.0"
+  },
+  "engines": {
+    "node": "8.11.3"
   }
 }
