@@ -55,7 +55,7 @@ app.post('/api/uploadContactForm', (req, res) => {
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 });
 }); 
-let port = process.env.PORT;
+var port = process.env.PORT;
 if (port == null || port == "") {
   port = 8000;
 }
