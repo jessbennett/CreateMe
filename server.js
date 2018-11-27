@@ -10,7 +10,7 @@ require('dotenv').load();
 //static folder
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.get('./client/public/index.html',function(req,res){
+app.get('/search',function(req,res){
     res.sendFile('index.html');
     //It will find and locate index.html from View or Scripts
   });
