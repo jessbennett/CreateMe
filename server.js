@@ -6,14 +6,9 @@ const bodyParser = require('body-parser');
 const nodemailer  = require('nodemailer');
 app.use(bodyParser.json({limit:'50mb'})) // handle json data
 app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-encoded data
-require('dotenv').load();
+require("dotenv").config()
 //static folder
-app.use('/public', express.static(path.join(__dirname, 'public')));
-
-app.get('/search',function(req,res){
-    res.sendFile('index.html');
-    //It will find and locate index.html from View or Scripts
-  });
+// app.use('/public', express.static(path.join(__dirname, 'public')));
 
   app.post('/api/uploadContactForm', (req, res) => {
     const output = `
@@ -60,8 +55,7 @@ app.get('/search',function(req,res){
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 });
 }); 
-var port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 app.listen(port);
