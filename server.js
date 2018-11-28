@@ -1,5 +1,5 @@
 require('dotenv').config()
-var PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const nodemailer  = require('nodemailer');
 app.use(bodyParser.json({limit:'50mb'})) // handle json data
 app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-encoded data
-require("dotenv").config()
+
 //static folder
 // app.use('/public', express.static(path.join(__dirname, 'public')));
 
