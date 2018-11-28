@@ -7,10 +7,13 @@ const bodyParser = require('body-parser');
 const nodemailer  = require('nodemailer');
 app.use(bodyParser.json({limit:'50mb'})) // handle json data
 app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-encoded data
-app.set('etag', false); // turn off
+// app.set('etag', false); // turn off
 
 //static folder
-app.use('/public', express.static(path.join(__dirname, 'public')));
+// app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+    etag: false
+}));
 
   app.post('/api/uploadContactForm', (req, res) => {
     const output = `
