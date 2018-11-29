@@ -1,6 +1,6 @@
 {
-  "main.css": "static/css/main.ec00555c.css",
-  "main.css.map": "static/css/main.ec00555c.css.map",
-  "main.js": "static/js/main.264c3f7e.js",
-  "main.js.map": "static/js/main.264c3f7e.js.map"
+  "main.css": "https://s3.us-east-2.amazonaws.com/unlimited-couponer/main.ec00555c.css",
+  "main.css.map": "https://s3.us-east-2.amazonaws.com/unlimited-couponer/main.ec00555c.css.map",
+  "main.js": "https://s3.us-east-2.amazonaws.com/unlimited-couponer/main.264c3f7e.js",
+  "main.js.map": "https://s3.us-east-2.amazonaws.com/unlimited-couponer/main.264c3f7e.js.map"
 }
