@@ -5,15 +5,13 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer  = require('nodemailer');
+app.use(express.static(path.join(__dirname, "client", "build")))
 app.use(bodyParser.json({limit:'50mb'})) // handle json data
 app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-encoded data
 // app.set('etag', false); // turn off
 
 //static folder
 // app.use('/public', express.static(path.join(__dirname, 'public')));
-app.use('/static', express.static(path.join(__dirname, 'public'), {
-    etag: false
-}));
 
   app.post('/api/uploadContactForm', (req, res) => {
     const output = `
@@ -60,7 +58,6 @@ app.use('/static', express.static(path.join(__dirname, 'public'), {
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 });
 }); 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+app.get("*", (req, res) => res.sendFile(path.join(__dirname, "client", "build", "index.html")));
+
 app.listen(port);
