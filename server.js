@@ -1,16 +1,17 @@
-Mongo.local
-
 require('dotenv').config()
+
 const port = process.env.PORT || 5000;
 const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer  = require('nodemailer');
+
 app.use(express.static(path.join(__dirname, "client", "build")))
 app.use(bodyParser.json({limit:'50mb'})) // handle json data
 app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-encoded data
-// app.set('etag', false); // turn off
+
+//app.set('etag', false); (who are you?)
 
 //static folder
 // app.use('/public', express.static(path.join(__dirname, 'public')));
