@@ -9,7 +9,6 @@
     ],
     "website": "https://Createmesoftware.com/",
     "repository": "https://github.com/jessbennett/CreateMe.git",
-    "logo": "https://s3.us-east-2.amazonaws.com/unlimited-couponer/createMeIcon.png",
     "success_url": "/welcome",
     "scripts": {
       "postdeploy": "bundle exec rake bootstrap"
