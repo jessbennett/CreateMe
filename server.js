@@ -63,4 +63,6 @@ app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-e
 }); 
 app.get("*", (req, res) => res.sendFile(path.join(__dirname, "client", "build", "index.html")));
 
+app.set('etag', true);
+
 app.listen(port);
