@@ -8,6 +8,11 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer  = require('nodemailer');
 
+const legacy = require('helmet')({ ... });
+const mid = server.utils.modern(legacy);
+
+server(mid, ...);
+
 app.use(express.static(path.join(__dirname, "client", "build")))
 app.use(bodyParser.json({limit:'50mb'})) // handle json data
 app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-encoded data
