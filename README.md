@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React Project used for Marketing
 
 > Create full stack apps with React and Express
@@ -17,3 +18,6 @@ npm run client
 # Server runs on http://localhost:4000 and client on http://localhost:4000
 ```
 #This project is completed and is ready for deployment. If you would like to make any changes or suggestions, please feel free to shoot me an email.
+=======
+## Addind new Phase
+>>>>>>> master

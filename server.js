@@ -1,17 +1,34 @@
+import helmet from "helmet";
+
 require('dotenv').config()
+
+const server = require('server');
+const port = process.env.PORT || 5000;
+
+
+
 const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer  = require('nodemailer');
+
+const legacy = require('helmet');
+const mid = server.utils.modern(legacy);
+app.use(helmet.hidePoweredBy())
+
+// server(mid, ...);
+
+app.use(express.static(path.join(__dirname, "client", "build")))
 app.use(bodyParser.json({limit:'50mb'})) // handle json data
 app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-encoded data
-require('dotenv').load();
+app.use(helmet());
+//app.set('etag', false); (who are you?)
+
 //static folder
-app.use('/public', express.static(path.join(__dirname, 'public')));
-console.log(process.env.email)
-console.log(process.env.pass)
-app.post('/api/uploadContactForm', (req, res) => {
+// app.use('/public', express.static(path.join(__dirname, 'public')));
+
+  app.post('/api/uploadContactForm', (req, res) => {
     const output = `
     <h3>Thank you for contacting us!</h3>
     <p> We will be responding shortly to your request. Please verify the below information is correct.</p>
@@ -46,16 +63,18 @@ app.post('/api/uploadContactForm', (req, res) => {
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
+            return (error);
         }
-        console.log('Message sent: %s', info.messageId);
+       ('Message sent: %s', info.messageId);
         // Preview only available when sending through an Ethereal account
-        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+        ('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 });
 }); 
-const port = 4000;
-app.listen(port, () => `Server running on port ${port}`)
-;
+app.get("*", (req, res) => res.sendFile(path.join(__dirname, "client", "build", "index.html")));
+
+app.set('etag', true);
+
+app.listen(port);

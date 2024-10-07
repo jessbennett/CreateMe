@@ -58,7 +58,6 @@ this.setState({description: e.target.value})
 }
 async uploadForm(e) {
 const url = '/api/uploadContactForm';
-alert(JSON.stringify(this.state))
 const dataObj = {
 firstname: this.state.firstName,
 lastName: this.state.lastName,

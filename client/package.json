@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "npm-install-global": "^1.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
@@ -12,13 +13,22 @@
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
+=======
+    "prop-types": "15.8.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-scripts": "5.0.1"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+>>>>>>> master
   },
   "scripts": {
     "start": "react-scripts start",
-    "nodemon": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:4000"
+  "proxy": "http://localhost:8000"
 }

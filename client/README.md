@@ -1,5 +1,5 @@
 # Install dependencies for server
-npm install
+<>npm install</>
 
 # Install dependencies for client
 npm run client-install
