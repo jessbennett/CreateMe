@@ -7,7 +7,7 @@ const nodemailer  = require('nodemailer');
 app.use(bodyParser.json({limit:'50mb'})) // handle json data
 app.use(bodyParser.urlencoded({ extended: true, limit:'50mb' })) // handle URL-encoded data
 
-require('dotenv').load();
+require('dotenv').config();
 
 //static folder
 app.use('/public', express.static(path.join(__dirname, 'public')));
